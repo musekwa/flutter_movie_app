@@ -1,16 +1,12 @@
-# flutter_movies_app
+# flutter_movies_app 
 
-A new Flutter project.
+## user stories
+1. I can see and scroll up/down to view all the upcoming movies from them themoviedb.org<br>
+2. I can performing an adaptive search on the listed movied by typing a movie's title on the app bar<br>
+3. I can tap on any movie card to see the details of any of the listed movies
 
-## Getting Started
+## Screenshots
+<img width="197" alt="img3" src="https://user-images.githubusercontent.com/19254270/128658953-0e4076a1-296b-40a8-83f5-c52359095b8c.png">
+<img width="198" alt="img4" src="https://user-images.githubusercontent.com/19254270/128658986-a1508f99-2b8a-4150-b2ab-cdf468cb3d46.png">
+<img width="198" alt="img5" src="https://user-images.githubusercontent.com/19254270/128660624-bd7a880f-5399-4000-8e76-047962761870.png">
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
