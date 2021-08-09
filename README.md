@@ -1,7 +1,7 @@
 # flutter_movies_app 
 
 ## user stories
-1. I can see scroll up and down to see all the upcoming movies from them themoviedb.org<br>
+1. I can see and scroll up/down to view all the upcoming movies from them themoviedb.org<br>
 2. I can performing an adaptive search on the listed movied by typing a movie's title on the app bar<br>
 3. I can tap on any movie card to see the details of any of the listed movies
 
