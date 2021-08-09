@@ -105,7 +105,7 @@ class _MovieListState extends State<MovieList> {
             ),
     );
   }
-
+  /// build the custom AppBar widget
   PreferredSizeWidget buildAppBar(BuildContext context) {
     return AppBar(
       title: this.searchBarText,
@@ -146,6 +146,9 @@ class _MovieListState extends State<MovieList> {
     );
   }
 
+  /// add the event listener to the TextEditintController
+  /// instance and check if the ccontroller text property
+  /// is not empty. if it isn't, set to true the search flag
   void startSearching() {
     _controller.addListener(() {
       if (_controller.text.isEmpty) {
@@ -160,6 +163,8 @@ class _MovieListState extends State<MovieList> {
     });
   }
 
+  /// deactivate the search operation
+  /// and resetting the search icon and title appbar
   void endSearching() {
     setState(() {
       _controller.clear();
@@ -169,8 +174,8 @@ class _MovieListState extends State<MovieList> {
     });
   }
 
+  /// GET all the upcoming movies from themoviedb.org with
   Future initialize() async {
-    //  movies = [];
     upcomingMovies = await helper.getUpcoming();
     setState(() {
       moviesCount = upcomingMovies.length;
@@ -178,6 +183,11 @@ class _MovieListState extends State<MovieList> {
     });
   }
 
+  /// clear the previous searched movies first, next
+  /// check if the search is set to true. if yes, then
+  /// iterate the whole movie list, and adding to the
+  /// searchedMovies list all movies of which titles contains
+  /// the text that is being typed
   void search(text) {
     searchedMovies.clear();
     if (isSearching) {
@@ -188,12 +198,5 @@ class _MovieListState extends State<MovieList> {
         }
       }
     }
-    /** 
-    movies = await helper.findMovies(text);
-    setState(() {
-      moviesCount = movies.length;
-      movies = movies;
-    });
-    */
   }
 }

@@ -45,31 +45,4 @@ class HttpHelper {
     }
   }
 
-  /// Find all movies with title containing
-  /// the string given as argument
-  Future<List> findMovies(String title) async {
-    // parse the string into the Uri object
-    final Uri query = Uri.parse(title);
-
-    // GET resources availabe at the url: query
-    http.Response result = await http.get(query);
-
-    /// check if the HTTP GET request was
-    /// successful
-    if (result.statusCode == HttpStatus.ok) {
-      // convert the resource into json format
-      final jsonResponse = json.decode(result.body);
-
-      // return movie json objects' list
-      final moviesMap = jsonResponse['resutl'];
-
-      /// iterate the movie json object list and
-      /// create a new list of movie object:
-      /// each json object is converted into movie object
-      List movies = moviesMap.map((i) => Movie.fromJson(i)).toList();
-      return movies;
-    } else {
-      return [];
-    }
-  }
 }
